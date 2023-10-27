@@ -7,10 +7,10 @@ print(pt.system())
 req_file = input("enter your file name: ")
 if "Windows"==pt.system(): 
      drive = string.ascii_uppercase #return all characters in  upper case as string
-     drive_list = []
+     drive_list = [] #for storing the drivers
      for x in drive:
           if os.path.exists(x+":\\"):
-               drive_list.append(x+":\\") #adding directroy if exit
+               drive_list.append(x+":\\") #adding directroy if exists
      print(drive_list)   
      for each_driver in  drive_list: #searching path
           for path,dic,file in (os.walk(each_driver)):
